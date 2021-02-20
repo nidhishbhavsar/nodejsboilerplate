@@ -12,7 +12,7 @@ interface FizzbuzzResponse extends Array<FizzbuzzResponseObj> { }
 
 const router = express.Router();
 
-router.post('/api/challange', [
+router.post('/api/challenge', [
     body('start').notEmpty().withMessage("You must provide start value"),
     body('stop').notEmpty().withMessage("You must provide stop value"),
     body('start').trim().isLength({ min: 0, max: 4294967295 })
